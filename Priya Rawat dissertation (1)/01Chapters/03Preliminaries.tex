@@ -1,0 +1,346 @@
+\chapter{Preliminaries}
+\begin{flushleft}
+\section{Intuitionistic Fuzzy Set}
+ The fuzzy set theory proposed by Zadeh $(1965)$ \cite{12} deals
+with the uncertainty in human decisions. Then, the Intuitionistic Fuzzy Set (IFS)
+was introduced by Atanassov $(1986)$ \cite{2}. IFS has been applied
+to a lot of various areas, including logic programming,
+medical diagnosis, decision-making, evaluation function,
+and preference relation. In this section, there are some descriptions of the IFS.
+\vspace{0.3cm}
+
+\linebreak
+
+  An intuitionistic fuzzy set (IFS) $A$ in $E$ is defined as an object of the following form:
+\begin{equation*}
+    A=\{<x,\mu_A (x),\nu_A(x)> \vert x\in E\}
+\end{equation*}
+where the functions:
+\begin{equation*}
+    \mu_A : E \rightarrow [0,1]
+\end{equation*}
+and
+\begin{equation*}
+    \nu_A : E \rightarrow [0,1]
+\end{equation*}
+define the degree of membership and the degree of non-membership of the
+element $x \in E$, respectively, and for every $x \in E$:
+\begin{equation*}
+    0\leq \mu_A (x)+\nu_A(x) \leq 1
+\end{equation*}
+
+For each IFS $A$ in $E$, we will call 
+\begin{equation*}
+    \pi_A (x)= 1-\mu_A (x)-\nu_A(x)
+\end{equation*}
+the degree of non-determinacy(or uncertainty) of the element $x\in E$ to the intuitionistic fuzzy set $A$.
+$\pi_A (x)$ is also known as the intuitionistic fuzzy index or hesitation degree of whether $x$ belongs to $A$ or not.
+
+
+Obviously, each ordinary fuzzy set may be written as
+\begin{equation*}
+ \{<x,\mu_A (x),1-\mu_A(x)> \vert x\in E\}   
+\end{equation*}
+Clearly, in this case $\pi_A(x)=0$ for every $x\in E$.
+
+\newpage
+%\section{$t$-NM, $t$-CM, AA $t$-NM}
+
+Aczel and Alsina (1982) presented two new operations to the academic
+method. These operations are known as the AA t-NM and the
+t-CM, and they place a significant emphasis on the importance of
+variation with regard to the activities of parameters.
+
+\vspace{3mm}
+
+\section{$t$-norm or $t$-NM}
+A function $T: [0,1] \times [0,1] \rightarrow [0,1]$ is called a
+$t$-norm if it satisfies the following four conditions\cite{11}:
+\item{(1)} $T(1,\kappa)=\kappa$, for all $\kappa$.
+\item{(2)} $T(\kappa,\tau) = T(\tau,\kappa)$, for all $\kappa$ and $\tau$.
+\item{(3)} $T(\kappa,T(\tau,z)) = T(T(\kappa,\tau),z)$, for all $\kappa$, $\tau$ and z.
+\item{(4)} If $\kappa \leq \kappa'$ and $\tau \leq \tau'$, then $T(\kappa,\tau) \leq T(\kappa',\tau')$
+
+\vspace{3mm}
+
+\section{$t$-conorm or $t$-CM}
+A function $S: [0,1] \times [0,1] \rightarrow [0,1]$ is called a
+$t$-conorm if it satisfies the following four conditions\cite{11}:
+\item{(1)} $S(0,\kappa)=\kappa$, for all $\kappa$.
+\item{(2)} $S(\kappa,\tau) = S(\tau,\kappa)$, for all $\kappa$ and $\tau$.
+\item{(3)} $S(\kappa,S(\tau,z)) = S(S(\kappa,\tau),z)$, for all $\kappa$, $\tau$ and z.
+\item{(4)} If  $\kappa \leq \kappa'$ and $\tau \leq \tau'$, then $S(\kappa,\tau) \leq S(\kappa',\tau')$
+
+\vspace{3mm}
+
+It should be noted that these two classes are dual, i.e., for every $t$-
+NM $T$ , the function $S:[0, 1]^2 \rightarrow [0, 1]$ given by $S(\kappa,\tau)=1-T(1-\kappa, 1-\tau)$
+is a $t$-CM (sometimes referred to as a $t$-CM dual to $T$ ), and for every $t$-
+CM $S$, the function $T : [0, 1]^2 \rightarrow [0, 1]$ given by $T(\kappa,\tau)=1-S(1-\kappa, 1-\tau)$
+is a $t$-NM ($t$-NM dual to $S$).
+
+\vspace{3mm}
+
+\section{Aczel and Alsina(AA) $t$-NM and $t$-CM} 
+Aczel and Alsina presented two new operations to the academic
+method. These operations are known as the AA $t$-NM and the
+$t$-CM, and they place a significant emphasis on the importance of
+variation with regard to the activities of parameters.
+The associated $t$-NMs are designated as $T_A ^\eta$
+and are referred to as
+(strict) AA $t$-NMs\cite{10}. They can be represented as
+\begin{equation*}
+    T_A^\eta (\kappa, \tau)= 
+    \begin{cases}
+    T_D (\kappa, \tau), & \text{if } \eta=0\\
+    min (\kappa, \tau), & \text{if } \eta=\infty\\
+    \exp^{-((-ln \kappa)^ \eta + (-ln \tau)^ \eta) ^{1/\eta}}, & \text{otherwise}
+    \end{cases}
+\end{equation*}
+
+Note that when we include the extremal $t$-NMs, we acquire an associated
+AA class ($ T_A^\eta$), $\eta \in [0, \infty]$ of $t$-NMs that consists of $t$-NMs that are
+continuous and strictly increasing in parameter $\eta$.
+By way of illustration, dual $t$-CMs $ S_A^\eta$
+to strict AA $t$-noms $ T_A^\eta$
+are
+produced by ‘‘additive generators’’ $s_n^\eta=(-log(1-\kappa))^\eta$, and are
+represented by
+\begin{equation*}
+    S_A^\eta (\kappa, \tau)= 
+    \begin{cases}
+    S_D (\kappa, \tau), & \text{if } \eta=0\\
+    max (\kappa, \tau), & \text{if } \eta=\infty\\
+    1-\exp^{-((-ln \kappa)^ \eta + (-ln \tau)^ \eta) ^{1/\eta}}, & \text{otherwise}
+    \end{cases}
+\end{equation*}
+
+Note that when we include the extremal $t$-CMs, we acquire an associated
+AA class ($ S_A^\eta$), $\eta \in [0, \infty]$ of $t$-CMs that consists of $t$-CMs that are
+continuous and strictly decreasing in parameter $\eta$.
+
+
+\section{Aczel and Alsina(AA) operations on IFNs}
+
+
+Suppose, $\phi$ and $\psi$ are
+both IFSs. Then the generalized intersection and the generalized union
+are calculated by using the formula:
+
+\vspace{3mm}
+
+$\phi \cap_{T,S} \psi =\{< \kappa, T\{\mu_{\phi}(\kappa), \mu_{\psi}(\kappa)\}, S\{\nu_{\phi}(\kappa), \nu_{\psi}(\kappa)\}>| \kappa \in E \}$
+
+$\phi \cup_{S,T} \psi =\{< \kappa, S\{\mu_{\phi}(\kappa), \mu_{\psi}(\kappa)\}, T\{\nu_{\phi}(\kappa), \nu_{\psi}(\kappa)\}>| \kappa \in E \}$
+
+\vspace{3mm}
+
+in which $T$ refers a $t$-NM and $S$ refers a $t$-CM.
+
+\vspace{3mm}
+
+Let t-NM, $T$ and t-CM, $S$ be the AA product $T_A$ and AA sum $S_A$ respectively.
+Then motivated by the above two equations, the generalized intersection and
+union over two IFSs $\phi$ and $\psi$ turn out to be the AA product (shown
+by $\phi \otimes \psi$) and AA sum (shown by $\phi \oplus \psi$) over two IFSs $\phi$ and $\psi$
+respectively, in the following way \cite{10}:
+\vspace{3mm}
+
+$\phi \otimes_{AA} \psi =\{< \kappa, T_A\{\mu_{\phi}(\kappa), \mu_{\psi}(\kappa)\}, S_A\{\nu_{\phi}(\kappa), \nu_{\psi}(\kappa)\}>| \kappa \in E \}$
+
+$\phi \oplus_{AA} \psi =\{< \kappa, S_A\{\mu_{\phi}(\kappa), \mu_{\psi}(\kappa)\}, T_A\{\nu_{\phi}(\kappa), \nu_{\psi}(\kappa)\}>| \kappa \in E \}$
+
+
+\vspace{3mm}
+
+\textbf{Definition:} Let  $A=\{<x,\mu_A (x),\nu_A(x)> \vert x\in E\}$,
+
+\vspace{3mm}
+
+$A_1=\{<x,\mu_{A_1} (x),\nu_{A_1} (x)> \vert x\in E\}$ 
+
+\vspace{3mm}
+
+$\text{and} A_2=\{<x,\mu_{A_2} (x),\nu_{A_2} (x)> \vert x\in E\}$ 
+
+\vspace{3mm}
+
+be three IFNs, $\tau \geq 1$, and $\eta > 0$. Following that, the AA t-NM and t-CM operations of IFNs are summarized as follows:
+
+\vspace{3mm}
+
+%\begin{enumerate}
+    \item{(i)} $A_1 \oplus_{AA} A_2 = \bigg < 1- e^{-((-\ln{(1-\mu_{A_1})})^ {\tau}+(-\ln{(1-\mu_{A_2})})^ {\tau})^{1/\tau}}, e^{-((-\ln{(\nu_{A_1})})^ {\tau}+(-\ln{(\nu_{A_2})})^ {\tau})^{1/\tau}} \bigg>$
+    
+   \item{(ii)} $A_1 \otimes_{AA} A_2 = \bigg < e^{-((-\ln{(\mu_{A_1})})^ {\tau}+(-\ln{(\mu_{A_2})})^ {\tau})^{1/\tau}} , 1- e^{-((-\ln{(1-\nu_{A_1})})^ {\tau}+(-\ln{(1-\nu_{A_2})})^ {\tau})^{1/\tau}} \bigg>$
+
+   \item{(iii)} $\eta \bigtimes_{AA} A =\bigg< 1- e^{-(\eta(-\ln{(1-\mu_{A})})^ {\tau})^{1/\tau}}, e^{-(\eta(-\ln{(\nu_{A})})^ {\tau})^{1/\tau}} \bigg >$
+
+   \item{(iv)} A^{\big{\eta_{AA}}}= \bigg< e^{-(\eta(-\ln{(\mu_{A})})^ {\tau})^{1/\tau}}, 1- e^{-(\eta(-\ln{(1-\nu_{A})})^ {\tau})^{1/\tau}} \bigg>
+%\end{enumerate}
+\newline
+ \section{Entropy based IF-TOPSIS method with Aczel and Alsina operations}
+
+ \vspace{3mm}
+ 
+TOPSIS, which was developed by Hwang and Yoon (1981)\cite{5}, is based on the idea that
+the chosen alternative should have the shortest distance from the positive ideal solution
+and the longest distance from the negative ideal solution. TOPSIS simultaneously considers the distances to both ideal solution
+and negative ideal solution, and a preference order is ranked according to their relative
+closeness, and a combination of these two distance measures. The formulas for the calculation of criteria weights are constructed based on the
+entropy of q-ROFSs developed by Liu et al. \cite{13}
+
+\vspace{3mm}
+
+The Intuitionistic Fuzzy TOPSIS model was introduced by Rouyendegh\cite{9} for the
+evaluation of the alternatives.
+
+The algorithm consists of nine steps as follows:
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{label = Step \arabic*:}
+\begin{steps}
+    
+
+\item  Originate the alternative and criterion sets
+
+In the MCDM procedure, the objective is to choose the optimal
+option from amongst the m alternatives $A={A_1,A_2,...,A_m}$ under
+the criterion set $C={C_1,C_2,...,C_n}$. Consider a committee of l experts
+ $L={l_1,l_2,...,l_l}$ has been formed to obtain the desirable
+alternative(s).
+\item Determine the weights of the importance of DMs
+The importance of each decision-maker is considered as linguistic terms articulated in IFNs.Let $Dl=[\mu_l,\nu_l, \pi_l]$ is the IFN for $l^{th}$ DM ranking. The importance of $l_th$ DM is evaluated with the following formula:
+\begin{equation}
+    \lambda_l=\frac{[\mu_l+\pi_l(\frac{\mu_l}{\mu_l +\nu_l})]}{\sum_{l=1}^{k} [\mu_l+\pi_l(\frac{\mu_l}{\mu_l +\nu_l})]}
+\end{equation}
+\begin{equation*}
+    \lambda_l \in [0,1] 
+    and
+ \sum_{l=1}^{k} \lambda_l =1
+\end{equation*}
+\item Create IF-aggregated decision matrix (IF-ADM)
+
+It is assumed that $\tau =1$. For four HCW disposal
+alternative methods, the IF AA operators are used to
+obtain an overall alternative values. To achieve a result, each individual opinion
+obtained from a group of DMs should be put together into a
+single opinion to construct the IF-ADM model.
+\begin{equation*}
+    R^{(l)}=(r_{ij}^{(l)})_{m*n} \text{is the IFDM of each DM}
+\end{equation*}
+\begin{equation*}
+    \lambda=\{\lambda_1,\lambda_2,\lambda_3,...,\lambda_k\} \text{is the weight of the decision maker}
+\end{equation*}
+\begin{equation*}
+    R=(r_{ij})_{m'\times n'} 
+\end{equation*}
+\begin{equation*}
+    r_{ij}=IFAAWA r_\lambda (r_{ij}^{(1)},r_{ij}^{(2)},...,r_{ij}^{(k)})=\lambda_1 r_{ij}^{(1)}+\lambda_2 r_{ij}^{(2)}+...+\lambda_k r_{ij}^{(k)}
+\end{equation*}
+\begin{equation}
+    r_{ij}= (\lambda_1 \times_{AA} r_{ij}^{(1)}) \oplus_{AA} (\lambda_2 \times_{AA} r_{ij}^{(2)}) \oplus_{AA} ... \oplus_{AA} (\lambda_k \times_{AA} r_{ij}^{(k)})
+\end{equation}
+%\begin{equation*}
+   % =\bigg[1-\prod_{l=1}^k (1-\mu_{ij}^{(l)})^{\lambda l}, \prod_{l=1}^k (\nu_{ij}^{(l)})^{\lambda l}, \prod_{l=1}^k (1-\mu_{ij}^{(l)})^{\lambda l}- \prod_{l=1}^k (1-\nu_{ij}^{(l)})^{\lambda l} \bigg]
+%\end{equation*}
+
+
+
+
+
+\item Obtain the entropy values\cite{1} of each IFN in the
+aggregated decision matrix by using the following:
+\begin{equation}
+    KE_i_j(x)=\frac{1}{\sqrt{2}} \sqrt{(\mu(x))^2 +(\nu(x))^2+(\mu(x)+\nu(x))^2}
+\end{equation}
+\begin{equation*}
+    EN_i_j(x)=1-KE_i_j(x)
+\end{equation*}
+\begin{equation}
+    EN_i_j(x) =1-\frac{1}{\sqrt{2}} \sqrt{(\mu(x))^2 +(\nu(x))^2+(\mu(x)+\nu(x))^2}
+\end{equation}
+
+\item Calculate the weights of the criteria. 
+
+The weights of the criteria
+are calculated based on entropy values by using the following:
+\begin{equation}
+    w_j=\frac{1-\xi_j}{\sum_{j=1}^{n}(1-\xi_j)},
+    j=1,2,...,n
+\end{equation}
+where
+\begin{equation}
+     \xi_j=\frac{\sum_{i=1}^{m} EN_i_j}{\sum_{i=1}^{m}\sum_{j=1}^{n} EN_i_j},
+\end{equation}
+indicates the intuitionistic fuzzy entropy value.
+
+
+
+\item Determine the intuitionistic fuzzy positive and
+negative-ideal solutions
+
+J1 is the benefit criteria and J2 is cost criteria. $A^+$ is the
+intuitionistic fuzzy positive-ideal solution and $A^-$ is the
+intuitionistic fuzzy negative-ideal solution. Then $A^+$ and
+$A^-$ are obtained as follows:
+\begin{equation}
+    A^+= (r_1^{'*},r_2^{'*},...,r_n^{'*}), r_j^{'*}=(\mu_j^{'*},\nu_j{'*},\pi_j{'*}), j= 1,2,...,n
+\end{equation}
+\begin{equation}
+    A^-= (r_1^{'-},r_2^{'-},...,r_n^{'-}), r_j^{'-}=(\mu_j^{'-},\nu_j{'-},\pi_j{'-}), j= 1,2,...,n
+\end{equation}
+where
+\begin{equation*}
+    \mu_j^{'*}=\{(\max_{i} \{\mu_i_j^{'}\}\vert j\in J_1) , (\min_{i} \{\mu_i_j^{'}\}\vert j\in J_2)\}
+\end{equation*}
+\begin{equation*}
+    \nu_j^{'*}=\{(\min_{i} \{\nu_i_j^{'}\}\vert j\in J_1) , (\max_{i} \{\nu_i_j^{'}\}\vert j\in J_2)\}
+\end{equation*}
+\begin{equation*}
+    \pi_j^{'*}=\{(1-\max_{i} \{\mu_i_j^{'}\}-\min_{i} \{\nu_i_j^{'}\}\vert j\in J_1) , (1-\min_{i} \{\mu_i_j^{'}\}-\max_{i} \{\nu_i_j^{'}\}\vert j\in J_2)\}
+\end{equation*}
+\begin{equation*}
+    \mu_j^{'-}=\{(\min_{i} \{\mu_i_j^{'}\}\vert j\in J_1) , (\max_{i} \{\mu_i_j^{'}\}\vert j\in J_2)\}
+\end{equation*}
+\begin{equation*}
+    \nu_j^{'-}=\{(\max_{i} \{\nu_i_j^{'}\}\vert j\in J_1) , (\min_{i} \{\nu_i_j^{'}\}\vert j\in J_2)\}
+\end{equation*}
+\begin{equation*}
+    \pi_j^{'-}=\{(1-\min_{i} \{\mu_i_j^{'}\}-\max_{i} \{\nu_i_j^{'}\}\vert j\in J_1) , (1-\max_{i} \{\mu_i_j^{'}\}-\min_{i} \{\nu_i_j^{'}\}\vert j\in J_2)\}
+\end{equation*}
+
+
+
+\item Determine the separation measures between the
+alternatives
+
+Determine separation measures by calculating the
+weighted distances for each alternative according to positive ideal solutions
+$A^+$ and negative-ideal solutions $A^-$. Distance between
+each alternative, and positive-ideal solution $A^+$ as well as negative-ideal solution $A^+$  are calculated by utilizing Euclidean distance. After selecting the distance measure, the separation measures are calculated. The separation measures of an alternative from the positive and negative-ideal solutions are indicated by $S_i^+$ and $S_i^-$.
+
+\begin{equation}
+    S_i^* = \sqrt{\frac{1}{2} \sum_{j=1}^{n} w_j [(\mu_i_j^{'}-\mu_j^{'*})^2 + (\nu_i_j^{'}-\nu_j^{'*})^2 +(\pi_i_j^{'}-\pi_j^{'*})^2]}
+\end{equation}
+\begin{equation}
+    S_i^- = \sqrt{\frac{1}{2} \sum_{j=1}^{n} w_j [(\mu_i_j^{'}-\mu_j^{'-})^2 + (\nu_i_j^{'}-\nu_j^{'-})^2 +(\pi_i_j^{'}-\pi_j^{'-})^2]}
+\end{equation}
+\item Calculate the relative closeness coefficient of alternative $A_i$ 
+
+The relative closeness coefficient of an alternative $A_i$
+to the intuitionistic fuzzy positive-ideal solution
+$A^+$ is defined as follows:
+\begin{equation}
+   C_i^*=\frac{S_i^-}{S_i^+ + S_i^-}
+\end{equation}
+and
+\begin{equation*}
+    0\leq C_i^*\leq 1
+\end{equation*}
+
+\item Determine the optimal alternative(s)   
+
+After determining the relative closeness coefficient,the $C_i^*$s are sorted in descending order to achieve the order of preference.
+\end{steps}
+\end{flushleft}
+

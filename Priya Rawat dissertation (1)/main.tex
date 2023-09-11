@@ -1,0 +1,40 @@
+\documentclass[10.5pt]{report}
+
+\input{config/packages.tex}
+\input{config/options.tex}
+\input{config/colors.tex}
+\input{config/theoremstyle.tex}
+\input{config/mathletters.tex}
+
+%\addbibresource{02End/math.bib}
+\addbibresource{ref.bib}
+\begin{document}
+    \include{00Intro/01_Title.tex}
+    \pagenumbering{roman} \setcounter{page}{2}
+    \include{00Intro/03_Certificate.tex}
+    \include{00Intro/02_Declaration.tex}
+    \include{00Intro/04_Acknowledgement.tex}
+    \include{00Intro/05_Abstract.tex}
+    \include{00Intro/06_ToC-LoF-LoA.tex}
+
+    \pagenumbering{arabic} \setcounter{page}{1}
+    \include{01Chapters/01Introduction.tex}
+    \include{01Chapters/02Literature Review} 
+    \include{01Chapters/03Preliminaries.tex}
+    \include{01Chapters/04A case study of HCW disposal method selection.tex}
+    \include{01Chapters/05Conclusion.tex}
+    %\include{01Chapters/Bibliography.tex}
+    %\addcontentsline{toc}{chapter}{Bibliography} 
+    %  \bibliographystyle{plain}
+    \nocite{*} % Without this, only cited materials are displayed in the bibliography.
+    
+    \printbibliography[heading=bibintoc]
+    %\appendix
+    %\appendixpage
+    %\addappheadtotoc
+    %\input{02End/appendix.tex}
+   % \bibliographystyle{plain}
+    %\bibliography{math.bib}
+    %\printbibliography[heading=bibintoc]
+
+\end{document}
